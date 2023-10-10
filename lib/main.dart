@@ -93,7 +93,7 @@ class MyApp extends StatelessWidget {
                   )
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Card(
                     margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
@@ -104,7 +104,7 @@ class MyApp extends StatelessWidget {
                         width: 50.0,
                     ),
                   ),
-                )
+                ),
                ]
               ),
             ],
