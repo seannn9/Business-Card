@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
+
+void _launchURL() async{
+  await launchUrlString("https://github.com/seannn9/Business-Card");
+}
 
 void main() {
   runApp(const MyApp());
@@ -87,16 +93,20 @@ class MyApp extends StatelessWidget {
                       )
                   )
               ),
-              Card(
-                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
-                  child: Padding(
-                    padding: EdgeInsets.all(5.0),
-                    child: ListTile(
-                        leading: Icon(Icons.account_box),
-                        title: Text("https://github.com/seannn9")
-                      )
-                  )
-              )
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Card(
+                    margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+                    child: InkWell(
+                      onTap: _launchURL,
+                      child: Image(
+                        image: AssetImage('images/github-mark.png'),
+                        width: 50.0,
+                    ),
+                  ),
+                )
+              ]),
             ],
           )
         )
