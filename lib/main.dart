@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 void _launchURL() async{
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.deepPurple[900],
+        backgroundColor: Colors.deepPurpleAccent[700],
         body: const SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -45,7 +44,7 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 300.0,
+                width: 250.0,
                 child: Divider(
                   thickness: 2.0,
                   color: Colors.white,
@@ -106,7 +105,8 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                 )
-              ]),
+               ]
+              ),
             ],
           )
         )
