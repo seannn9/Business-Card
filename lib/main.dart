@@ -17,24 +17,25 @@ class MyApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
-                radius: 50.0,
-                backgroundColor: Colors.amberAccent,
+                radius: 60.0,
+                backgroundImage: AssetImage('images/cat.jpg'),
               ),
               Text(
                 "Sean Montano",
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 30.0,
+                  fontSize: 40.0,
                   fontWeight: FontWeight.bold,
-                  fontFamily: 'PermanentMarker'
+                  fontFamily: 'Acme',
                 ),
               ),
               Text(
-                "App Developer",
+                "Computer Engineer",
                 style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.amberAccent,
                   fontSize: 20.0,
-                  fontWeight: FontWeight.bold
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Gloria'
                 ),
               ),
               SizedBox(
@@ -45,7 +46,7 @@ class MyApp extends StatelessWidget {
                 )
               ),
               Card(
-                margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 30.0),
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
                 child: Padding(
                   padding: EdgeInsets.all(5.0),
                   child: ListTile(
@@ -55,14 +56,46 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Card(
-                margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 30.0),
+                color: Colors.black87,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
                 child: Padding(
                   padding: EdgeInsets.all(5.0),
                   child: ListTile(
-                    leading: Icon(Icons.mail),
-                    title: Text("seanulric9@gmail.com")
+                    leading: Icon(Icons.mail, color: Colors.white),
+                    title: Text("seanulric9@gmail.com", style: TextStyle(color: Colors.white),)
                   )
                 )
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+                child: Padding(
+                  padding: EdgeInsets.all(5.0),
+                  child: ListTile(
+                    leading: Icon(Icons.home),
+                    title: Text("Garita B, Maragondon, Cavite")
+                  )
+                )
+              ),
+              Card(
+                color: Colors.black87,
+                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+                  child: Padding(
+                    padding: EdgeInsets.all(5.0),
+                    child: ListTile(
+                        leading: Icon(Icons.school, color: Colors.white),
+                        title: Text("De La Salle University Dasmarinas", style: TextStyle(color: Colors.white),)
+                      )
+                  )
+              ),
+              Card(
+                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+                  child: Padding(
+                    padding: EdgeInsets.all(5.0),
+                    child: ListTile(
+                        leading: Icon(Icons.account_box),
+                        title: Text("https://github.com/seannn9")
+                      )
+                  )
               )
             ],
           )
