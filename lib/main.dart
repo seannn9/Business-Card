@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-void _launchURL() async{
+void launchURL() async{
   await launchUrlString("https://github.com/seannn9/Business-Card");
 }
 
@@ -16,16 +16,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.deepPurpleAccent[700],
-        body: const SafeArea(
+        backgroundColor: Colors.indigo[900],
+        body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CircleAvatar(
+              const CircleAvatar(
                 radius: 60.0,
-                backgroundImage: AssetImage('images/cat.jpg'),
+                backgroundImage: AssetImage('images/profile.jpg'),
               ),
-              Text(
+              const Text(
                 "Sean Montano",
                 style: TextStyle(
                   color: Colors.white,
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
                   fontFamily: 'Acme',
                 ),
               ),
-              Text(
+              const Text(
                 "Computer Engineer",
                 style: TextStyle(
                   color: Colors.amberAccent,
@@ -43,62 +43,66 @@ class MyApp extends StatelessWidget {
                   fontFamily: 'Gloria'
                 ),
               ),
-              SizedBox(
-                width: 250.0,
+              const SizedBox(
+                width: 200.0,
                 child: Divider(
                   thickness: 2.0,
                   color: Colors.white,
                 )
               ),
               Card(
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
-                child: Padding(
+                color: Colors.blue[900],
+                margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+                child: const Padding(
                   padding: EdgeInsets.all(5.0),
                   child: ListTile(
-                    leading: Icon(Icons.phone),
-                    title: Text("+63 917 9685440")
+                    leading: Icon(Icons.phone, color: Colors.white),
+                    title: Text("+63 917 9685440", style: TextStyle(fontFamily: 'Ubuntu', color: Colors.white),)
                   )
                 ),
               ),
               Card(
-                color: Colors.black87,
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
-                child: Padding(
+                color: Colors.blue[900],
+                margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+                child: const Padding(
                   padding: EdgeInsets.all(5.0),
                   child: ListTile(
                     leading: Icon(Icons.mail, color: Colors.white),
-                    title: Text("seanulric9@gmail.com", style: TextStyle(color: Colors.white),)
+                    title: Text("seanulric9@gmail.com", style: TextStyle(color: Colors.white,
+                    fontFamily: 'Ubuntu'),)
                   )
                 )
               ),
               Card(
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
-                child: Padding(
+                color: Colors.blue[900],
+                margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+                child: const Padding(
                   padding: EdgeInsets.all(5.0),
                   child: ListTile(
-                    leading: Icon(Icons.home),
-                    title: Text("Garita B, Maragondon, Cavite")
+                    leading: Icon(Icons.home, color: Colors.white),
+                    title: Text("Garita B, Maragondon, Cavite", style: TextStyle(fontFamily: 'Ubuntu', color: Colors.white))
                   )
                 )
               ),
               Card(
-                color: Colors.black87,
-                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
-                  child: Padding(
-                    padding: EdgeInsets.all(5.0),
-                    child: ListTile(
-                        leading: Icon(Icons.school, color: Colors.white),
-                        title: Text("De La Salle University Dasmarinas", style: TextStyle(color: Colors.white),)
-                      )
-                  )
+                color: Colors.blue[900],
+                margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+                child: const Padding(
+                  padding: EdgeInsets.all(5.0),
+                  child: ListTile(
+                      leading: Icon(Icons.school, color: Colors.white),
+                      title: Text("De La Salle University-Dasmarinas", style: TextStyle(color: Colors.white,
+                          fontFamily: 'Ubuntu'),)
+                    )
+                )
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Card(
                     margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
                     child: InkWell(
-                      onTap: _launchURL,
+                      onTap: launchURL,
                       child: Image(
                         image: AssetImage('images/github-mark.png'),
                         width: 50.0,
@@ -107,6 +111,20 @@ class MyApp extends StatelessWidget {
                 ),
                ]
               ),
+              Card(
+                color: Colors.blue[900],
+                margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+                child: const Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Text(
+                    "Click GitHub Icon",
+                    style: TextStyle(
+                      fontFamily: 'Ubuntu',
+                      color: Colors.white
+                    ),
+                  )
+                )
+              )
             ],
           )
         )
